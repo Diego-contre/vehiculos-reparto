@@ -1,65 +1,93 @@
+// Definimos la clase principal (superclase)
 public class Vehiculo {
 
-    public String patente;
-    public String marca;
-    public String modelo;
-    public double capacidadCarga;
-    public boolean disponible;
 
-    // === Constructor ===
-    public Vehiculo(String patente, String marca, String modelo, double capacidadCarga, boolean disponible) {
+
+    // Son private para que nadie los modifique directamente
+
+    private String patente;
+    private String marca;
+    private String modelo;
+    private double capacidadCarga;
+    private boolean disponible;
+
+    //CONSTRUCTOR
+    // Este metodo se ejecuta cuando creamos un objeto Vehiculo
+    public Vehiculo(String patente, String marca, String modelo, double capacidadCarga){
+
+        // Guardamos los datos que vienen al crear el objeto
         this.patente = patente;
         this.marca = marca;
         this.modelo = modelo;
         this.capacidadCarga = capacidadCarga;
-        this.disponible = disponible;
+
+        // Todos los vehículos parten disponibles automáticamente
+        this.disponible = true;
     }
 
-    // === GET ===
+    //devuelve la patente del vehiculo
     public String getPatente(){
         return patente;
     }
-    public String getMarca(){
+
+    //devuelve la marca
+    public  String getMarca(){
         return marca;
     }
+
+    //devuelve el modelo
     public String getModelo(){
         return modelo;
     }
-    public double getCapacidadCarga(){
+
+    //devuelve la capacidad de carga
+    public double getcapacidadCarga(){
         return capacidadCarga;
     }
-    public boolean isDisponible(){
+
+    // En boolean se usa "is" en vez de "get"
+    public boolean isDisponible() {
         return disponible;
     }
 
-    // === SET ===
+    //SETTERS (MODIFICAR DATOS)
+    public void setPatente(String patente) {
 
-    public void setPatente(){
-        this.patente = patente;
-    }
+        if(patente != null && !patente.isEmpty()){
 
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
-    public void setCapacidadCarga(double capacidadCarga) {
-        //verificamos que la capacidad de carga no sea negativo
-        if (capacidadCarga > 0){
-            this.capacidadCarga = capacidadCarga;
+        }else {
+            System.out.println("La patenta no puede estar vacia");
         }
     }
 
-    public void setDisponible(boolean disponible) {
-        this.disponible = disponible;
+    //cambiar modelo
+    public void setModelo(String modelo) {
+        if(modelo !=null && !modelo.isEmpty()) {
+            this.modelo = modelo;
+        }else{
+            System.out.println("El modelo no puede estar vacio");
+        }
     }
 
-    public String mostrarDetalle(){
-        return "Patente: "+ patente + " | Marca: " + marca + " | Modelo: " + modelo + " | ";
+    public void setCapacidadCarga(double capacidadCarga) {
+        if(capacidadCarga >=0) {
+            this.capacidadCarga = capacidadCarga;
+        } else{
+            System.out.println("La capacidad no puede ser negativa");
+        }
     }
+    public void mostrarDetalle(){
+        System.out.println("= VEHICULO =");
+        System.out.println("Patente " + patente);
+        System.out.println("Marca: " +  marca);
+        System.out.println("Modelo: " + modelo);
+        System.out.println("Capacidad de carga: " + capacidadCarga);
 
+        if (disponible) {
+            System.out.println("Disponible: Sí");
+        } else {
+            System.out.println("Disponible: No");
+        }
 
+    }
 }
