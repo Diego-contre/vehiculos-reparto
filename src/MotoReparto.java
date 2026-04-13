@@ -23,4 +23,12 @@ public class MotoReparto extends Vehiculo {
         System.out.println("Tipo: Moto de reparto");
         System.out.println("Caja térmica: "+ (cajaTermica ? "Sí": "No"));
     }
+
+
+// Agregar en el Main para que funcione con Listas
+//        import java.util.ArrayList;
+//     ArrayList<Vehiculo> vehiculos = new ArrayList<>();
+//        MotoReparto moto = new MotoReparto("XD-66-99","Honda","Yaris",40,true);
+//        vehiculos.add(moto);
+//        moto.mostrarDetalle();
 }
