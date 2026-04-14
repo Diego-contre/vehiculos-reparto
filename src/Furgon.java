@@ -24,7 +24,7 @@ public class Furgon extends Vehiculo {
         System.out.println("Patente: " + getPatente());
         System.out.println("Marca: " + getMarca());
         System.out.println("Modelo: " + getModelo());
-        System.out.println("Capacidad de carga: " + getCapacidadCarga() + " kg");
+        System.out.println("Capacidad de carga: " + getcapacidadCarga() + " kg");
         System.out.println("Disponible: " + (isDisponible() ? "Sí" : "No"));
         System.out.println("Volumen interior: " + volumenInterior + " m3");
         System.out.println("---------------------------");

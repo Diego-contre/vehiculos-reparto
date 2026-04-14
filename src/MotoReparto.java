@@ -4,10 +4,9 @@ public class MotoReparto extends Vehiculo {
     private boolean cajaTermica;
 
 
-    public MotoReparto(String patente, String marca, String modelo, double capacidadCarga, boolean disponible) {
-        super(patente, marca, modelo, capacidadCarga);
-        this.cajaTermica = cajaTermica;
-
+    public MotoReparto(String patente, String marca, String modelo, double capacidadCarga, boolean disponible, boolean cajaTermica) {
+        super(patente, marca, modelo, capacidadCarga, disponible);
+        this.cajaTermica = cajaTermica; // ← ahora sí recibe el valor
     }
     // === get ===
     public boolean isCajaTermica() {

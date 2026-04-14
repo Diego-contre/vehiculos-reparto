@@ -13,7 +13,7 @@ public class Vehiculo {
 
     //CONSTRUCTOR
     // Este metodo se ejecuta cuando creamos un objeto Vehiculo
-    public Vehiculo(String patente, String marca, String modelo, double capacidadCarga){
+    public Vehiculo(String patente, String marca, String modelo, double capacidadCarga, boolean disponible){
 
         // Guardamos los datos que vienen al crear el objeto
         this.patente = patente;
@@ -48,6 +48,11 @@ public class Vehiculo {
     // En boolean se usa "is" en vez de "get"
     public boolean isDisponible() {
         return disponible;
+    }
+
+    // para corregir un error(VERIFICAR)
+    public void setDisponible(boolean disponible){
+        this.disponible =  disponible;
     }
 
     //SETTERS (MODIFICAR DATOS)
@@ -85,6 +90,7 @@ public class Vehiculo {
 
         if (disponible) {
             System.out.println("Disponible: Sí");
+
         } else {
             System.out.println("Disponible: No");
         }

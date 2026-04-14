@@ -2,8 +2,8 @@ public class Camion extends Vehiculo {
 
     private int numeroEjes;
 
-    public Camion(String patente, String marca, String modelo, double capacidadCarga, int numeroEjes) {
-        super(patente, marca, modelo, capacidadCarga);
+    public Camion(String patente, String marca, String modelo, double capacidadCarga,boolean disponible, int numeroEjes) {
+        super(patente, marca, modelo, capacidadCarga, disponible);
         this.numeroEjes = numeroEjes;
         System.out.println("Camión registrado: " + marca + " " + modelo + " | Patente: " + patente + " | Ejes: " + numeroEjes);
     }
@@ -23,7 +23,6 @@ public class Camion extends Vehiculo {
         System.out.println("CAMIÓN" +
                 " | Patente: " + getPatente() +
                 " | Marca: " + getMarca() +
-                " | Carga: " + getCapacidadCarga() +
                 " | Ejes: " + numeroEjes +
                 " | Disponible: " + isDisponible());
     }
