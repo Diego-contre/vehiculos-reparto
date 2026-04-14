@@ -57,8 +57,8 @@ public class Vehiculo {
         this.disponible = disponible;
     }
 
-    public String mostrarDetalle(){
-        return "Patente: "+ patente + " | Marca: " + marca + " | Modelo: " + modelo + " | ";
+    public void mostrarDetalle() {
+        System.out.println("Patente: "+ patente + " | Marca: " + marca + " | Modelo: " + modelo + " | ");
     }
 
 
